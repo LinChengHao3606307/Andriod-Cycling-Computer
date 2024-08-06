@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="50dp"
+    android:viewportWidth="10"
+    android:viewportHeight="5">
+
+    <path
+        android:name="toHomePath"
+        android:pathData="
+            M 0.7738,3.0631
+            v -0.4
+            h -0.15
+            l 0.5,-0.5
+              0.5,0.5
+            h -0.15
+            v 0.4
+            h -0.2
+            "
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.1"
+        android:strokeLineCap="round"/>
+
+
+</vector>

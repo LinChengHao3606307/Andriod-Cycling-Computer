@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="90dp"
+    android:layout_height="75dp">
+
+    <TextView
+        android:id="@+id/averageSpeedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.1km/h"
+        app:layout_constraintStart_toStartOf="@+id/timeTakenTxt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTakenTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1h11m"
+        app:layout_constraintStart_toStartOf="@+id/distanceTxt"
+        app:layout_constraintTop_toBottomOf="@+id/averageSpeedImg" />
+
+    <TextView
+        android:id="@+id/distanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="111.1km"
+        app:layout_constraintStart_toEndOf="@+id/distanceImg"
+        app:layout_constraintTop_toBottomOf="@+id/timeTakenImg" />
+
+    <ImageView
+        android:id="@+id/averageSpeedImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/averageSpeedTxt"
+        app:srcCompat="@drawable/ic_speed" />
+
+    <ImageView
+        android:id="@+id/timeTakenImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeTakenTxt"
+        app:srcCompat="@drawable/ic_time_count" />
+
+    <ImageView
+        android:id="@+id/distanceImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/distanceTxt"
+        app:srcCompat="@drawable/ic_distance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

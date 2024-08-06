@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:drawable="@drawable/cycling_path">
+
+    <target
+        android:name="toCurPath"
+        android:animation="@animator/reveal_path" />
+    <target
+        android:name="toHomePath"
+        android:animation="@animator/reveal_path" />
+</animated-vector>
