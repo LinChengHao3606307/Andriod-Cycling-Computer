@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
     private long startMeasuringTime;
 
     private ConstraintLayout parentLayout, mainPaddleLayout;
-    private static ArrayList<Flage> flags = new ArrayList<>();
-    private static Flage prevSelectedFlag, justSelectedFlag;
+    private static ArrayList<Flag> flags = new ArrayList<>();
+    private static Flag prevSelectedFlag, justSelectedFlag;
     private DrawArcView highlightedArc;
 
     @SuppressLint("MissingInflatedId")
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void isClicked(View itemView) {
-        for (Flage f:flags) {
+        for (Flag f:flags) {
             if (f.itemView == itemView) {
                 prevSelectedFlag.setToUnselect();
                 prevSelectedFlag = justSelectedFlag;
@@ -223,9 +223,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private Flage putFlagAt(float ang, boolean isVisible) {
-        Flage newFlage = new Flage(ang,screenWidth,speedTxtCenterY, MainActivity.this,parentLayout, fromLastPauseTime+tillLastPauseTime, distanceTotal, isVisible);
-        return newFlage;
+    private Flag putFlagAt(float ang, boolean isVisible) {
+        Flag newFlag = new Flag(ang,screenWidth,speedTxtCenterY, MainActivity.this,parentLayout, fromLastPauseTime+tillLastPauseTime, distanceTotal, isVisible);
+        return newFlag;
     }
 
 
@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
         changeMeasuringState();
     }
     private void restoreFlags(float[] allFlagsDistArray, float[] allFlagsTimesArray) {
-        for (Flage f:flags) {
+        for (Flag f:flags) {
             parentLayout.removeView(f.itemView);
         }
         flags.clear();
@@ -276,8 +276,8 @@ public class MainActivity extends AppCompatActivity {
             float ang=0;
             if (count==0) {ang=-26;}
             if (count==1) {ang=22;}
-            Flage newFlage = new Flage(ang,screenWidth,speedTxtCenterY, MainActivity.this,parentLayout, allFlagsTimesArray[count], value, count>1);
-            flags.add(newFlage);
+            Flag newFlag = new Flag(ang,screenWidth,speedTxtCenterY, MainActivity.this,parentLayout, allFlagsTimesArray[count], value, count>1);
+            flags.add(newFlag);
             count++;
         }
         flags.get(0).isSelected=true;
@@ -576,7 +576,7 @@ public class MainActivity extends AppCompatActivity {
             homeImg.setVisibility(View.VISIBLE);
             currentPosImg.setVisibility(View.VISIBLE);
             showAverageData =true;
-            for (Flage f: flags) {
+            for (Flag f: flags) {
                 f.itemView.setVisibility(View.VISIBLE);
             }
         }
@@ -596,7 +596,7 @@ public class MainActivity extends AppCompatActivity {
             homeImg.setVisibility(View.GONE);
             currentPosImg.setVisibility(View.GONE);
             showAverageData =false;
-            for (Flage f: flags) {
+            for (Flag f: flags) {
                 f.itemView.setVisibility(View.GONE);
             }
         }

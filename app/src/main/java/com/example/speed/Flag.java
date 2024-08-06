@@ -3,21 +3,14 @@ package com.example.speed;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
-import java.util.ArrayList;
-
-public class Flage {
+public class Flag {
 
     public int viewId;
     public View itemView;
@@ -26,7 +19,7 @@ public class Flage {
     public float distanceFromStart;
     public float positionAng;
 
-    public Flage(float ang, int screenWidth, int speedTxtCenterY, Context context, ConstraintLayout parentLayout, float haveTakenTime, float currentDist, boolean isVisible) {
+    public Flag(float ang, int screenWidth, int speedTxtCenterY, Context context, ConstraintLayout parentLayout, float haveTakenTime, float currentDist, boolean isVisible) {
         float scale = context.getResources().getDisplayMetrics().density;
         int sizeInPx = (int) (50 * scale + 0.5f);
         itemView = LayoutInflater.from(context).inflate(R.layout.put_flage_layout, null);

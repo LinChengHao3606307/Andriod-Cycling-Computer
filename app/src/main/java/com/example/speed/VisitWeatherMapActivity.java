@@ -2,20 +2,12 @@ package com.example.speed;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
@@ -23,7 +15,7 @@ public class VisitWeatherMapActivity extends AppCompatActivity {
 
     private WebView webView;
     private String city;
-    private static ArrayList<Flage> flags = new ArrayList<>();
+    private static ArrayList<Flag> flags = new ArrayList<>();
     private boolean isPaused;
     private float lastPauseDistance, fromLastPauseTime;
     private int screenWidth, speedTxtCenterY;
